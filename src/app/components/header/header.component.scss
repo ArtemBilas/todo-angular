@@ -1,6 +1,31 @@
+@import "../../app.component.scss";
+
 :host{
 	.header {
-		background: purple;
 		min-height: 5vh;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: $background-main;
+		padding: 0 1rem;
+		color: $light-text-color;
+
+		.link-list {
+			display: flex;
+			align-items: center;
+
+			.link-item {
+				color: $light-text-color;
+				padding: 0.3125rem;
+
+				i{
+					font-size: 2rem;
+
+					&:hover {
+						opacity: .8;
+					}
+				}
+			}
+		}
 	}
 } 

@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { PrimeIcons } from 'primeng/api';
 
 import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 const PRIME_NG_MODULES: any[] = [
-  InputTextModule
+  InputTextModule,
+  ButtonModule
   ];
 
 @NgModule({

@@ -1,6 +1,10 @@
+@import "../../app.component.scss";
+
 :host{
 	.footer {
 		background: tomato;
 		min-height: 5vh;
+		background: $background-main;
+		color: $light-text-color;
 	}
 }
