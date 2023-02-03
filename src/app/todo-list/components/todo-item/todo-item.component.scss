@@ -19,6 +19,23 @@
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
 
+			&:hover {
+				cursor: pointer;
+				
+				.pi-ellipsis-v{
+					position: absolute;
+					top: 35%;
+					right: 0;
+					color: $cyan;
+					opacity: 1;
+					font-size: 1.2rem;
+				}
+			}
+
+			.pi-ellipsis-v {
+				opacity: 0;
+			}
+
 			&.hight{
 				background: $orange-300;
 			}
@@ -57,6 +74,7 @@
 						border-radius: 5px;
 						padding: 4px;
 						color: $cyan;
+						cursor: pointer;
 					}
 				}
 

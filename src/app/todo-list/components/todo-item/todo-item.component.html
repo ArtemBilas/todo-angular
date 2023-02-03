@@ -1,6 +1,8 @@
 <li class="todo-item" id='todo.id'>
 	<div class="text-container">
-		<span [ngClass]="'priority ' + todo.priority"></span>
+		<span [ngClass]="'priority ' + todo.priority">
+			<i class="pi pi-ellipsis-v"></i>
+		</span>
 		<span class="todo-title">{{todo.title}}</span>
 	</div>
 
