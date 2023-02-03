@@ -1,6 +1,12 @@
 <todo-input></todo-input>
 
 <div class="todos-container">
-	<p>todo-list works!</p>
+	<div *ngIf="todos; else emty">
+		<ul class="todo-list" *ngFor="let todo of todos">
+			<todo-item [todo]="todo"></todo-item>
+		</ul>
+	</div>
+	
+	<ng-template #emty>List is Empty</ng-template>
 </div>
 

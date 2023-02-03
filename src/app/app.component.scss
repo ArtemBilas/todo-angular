@@ -3,35 +3,50 @@ $dark-text-color: #333333;
 $light-text-color: #f6f8fa;
 $background-main: #aabecd;
 
-* {
-    margin: 0;
-    padding: 0;
+//colors
+$blue-300:#85b2f9;
+$orange-300: #ff8780;
+$green-300: #76db9b;
+$gray-300:#9fa9b7;
+$blue-gray-400: #818ea1;
+$cyan: #f3fbfd;
 
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+//templates 
+%border-item{
+	border: 1px solid #ced4da;
+	border-radius: 6px;
+	padding: .75rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
 }
 
 html, 
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
 }
 
 html {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 body{   
-    width: 100%;
-    flex-direction: column;
+	width: 100%;
+	flex-direction: column;
 
-    .content-wrapper {
-        max-width: 1440px;
-        margin: 0 auto;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+	.content-wrapper {
+		max-width: 1440px;
+		margin: 0 auto;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
 }

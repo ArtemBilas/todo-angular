@@ -1,1 +1,12 @@
-<p>todo-item works!</p>
+<li class="todo-item" id='todo.id'>
+	<div class="text-container">
+		<span [ngClass]="'priority ' + todo.priority"></span>
+		<span class="todo-title">{{todo.title}}</span>
+	</div>
+
+	<div class="btns-container">
+		<i class="pi pi-check"></i>
+		<i class="pi pi-pencil"></i>
+		<i class="pi pi-trash"></i>
+	</div>
+</li>

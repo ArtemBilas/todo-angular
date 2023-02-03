@@ -1,0 +1,83 @@
+@import "../../../app.component.scss";
+
+.todo-item {
+	@extend %border-item;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+
+	.text-container {
+		.priority {
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 20px;
+			height: 100%;
+			justify-self: flex-start;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+
+			&.hight{
+				background: $orange-300;
+			}
+			&.medium {
+				background: $green-300;
+			}
+			&.low {
+				background: $blue-300;
+			}
+			&.free {
+				background: $gray-300;
+			}
+		}
+
+		.todo-title{
+			padding-left: 20px;
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+	}
+
+	.btns-container{
+		justify-self: flex-end;
+
+		i{
+			&.pi {
+				padding: 5px;
+				margin: 2px;
+
+				&.pi-check,
+				&.pi-pencil,
+				&.pi-trash{
+					&:hover {
+						border: 1px solid $cyan;
+						border-radius: 5px;
+						padding: 4px;
+						color: $cyan;
+					}
+				}
+
+				&.pi-check{
+					&:hover {
+						background: $green-300;
+					}
+				}
+
+				&.pi-pencil{
+					&:hover {
+						background: $blue-300;
+					}
+				}
+
+				&.pi-trash{
+					&:hover {
+						background: $orange-300;
+					}
+				}
+			}
+		}
+	}
+}
