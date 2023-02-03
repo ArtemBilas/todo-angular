@@ -1,9 +1,11 @@
+@import "../../app.component.scss";
+
 :host {
 	flex-grow: 1;
 	height: 10vh;
 
 	.main {
-		background: #eff3f8;
+		background: $light-grey;
 		height: 100%;
 		padding: 3rem 0;
 
@@ -13,7 +15,7 @@
 			margin: 0 auto;
 			border-radius: 5px;
 			box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-			background: #ffffff;
+			background: $light;
 		}
 	}
 }
