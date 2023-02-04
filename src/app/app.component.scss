@@ -13,7 +13,7 @@ $cyan: #f3fbfd;
 $light-grey: #F5F5F5;
 $light: #ffff;
 
-//templates 
+//templates
 %border-item{
 	border: 1px solid #ced4da;
 	border-radius: 6px;
@@ -30,7 +30,7 @@ $light: #ffff;
 	}
 }
 
-html, 
+html,
 body {
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
@@ -40,7 +40,7 @@ html {
 	font-size: 16px;
 }
 
-body{   
+body{
 	width: 100%;
 	flex-direction: column;
 
@@ -50,5 +50,17 @@ body{
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
+
+    .content{
+      max-width: 960px;
+      height: auto;
+      overflow: auto;
+      //max-width: 60%;
+      margin: 50px auto 15px;
+      padding: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+      background: $light;
+    }
 	}
 }

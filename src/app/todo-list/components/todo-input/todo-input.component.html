@@ -1,4 +1,14 @@
-<form class="form">
-	<input type="text" pInputText placeholder="type here...">
-	<p-button label='Submit'></p-button>
+<form
+  class="form"
+  [formGroup]="form"
+  (ngSubmit)="submitHandler()"
+>
+  <input
+    id="inputValue"
+    type="text"
+    pInputText
+    placeholder="type here..."
+    formControlName="todoInput"
+  >
+  <p-button label='Submit' (click)="submitHandler()"></p-button>
 </form>

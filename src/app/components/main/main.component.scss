@@ -8,14 +8,6 @@
 		background: $light-grey;
 		height: 100%;
 		padding: 3rem 0;
-
-		.content{
-			height: 100%;
-			max-width: 60%;
-			margin: 0 auto;
-			border-radius: 5px;
-			box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-			background: $light;
-		}
+    overflow: auto;
 	}
 }

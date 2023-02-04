@@ -1,101 +1,105 @@
 @import "../../../app.component.scss";
 
 .todo-item {
-	@extend %border-item;
-	margin-bottom: 1rem;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	position: relative;
+  @extend %border-item;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
 
-	.text-container {
-		.priority {
-			position: absolute;
-			top:0;
-			left: 0;
-			width: 20px;
-			height: 100%;
-			justify-self: flex-start;
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
+  .text-container {
+    .priority {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 100%;
+      justify-self: flex-start;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
 
-			&:hover {
-				cursor: pointer;
-				
-				.pi-ellipsis-v{
-					position: absolute;
-					top: 35%;
-					right: 0;
-					color: $cyan;
-					opacity: 1;
-					font-size: 1.2rem;
-				}
-			}
+      &:hover {
+        cursor: pointer;
 
-			.pi-ellipsis-v {
-				opacity: 0;
-			}
+        .pi-ellipsis-v {
+          position: absolute;
+          top: 35%;
+          right: 0;
+          color: $cyan;
+          opacity: 1;
+          font-size: 1.2rem;
+        }
+      }
 
-			&.hight{
-				background: $orange-300;
-			}
-			&.medium {
-				background: $green-300;
-			}
-			&.low {
-				background: $blue-300;
-			}
-			&.free {
-				background: $gray-300;
-			}
-		}
+      .pi-ellipsis-v {
+        opacity: 0;
+      }
 
-		.todo-title{
-			padding-left: 20px;
-			display: flex;
-			align-items: center;
-			height: 100%;
-		}
-	}
+      &.high {
+        background: $orange-300;
+      }
 
-	.btns-container{
-		justify-self: flex-end;
+      &.medium {
+        background: $green-300;
+      }
 
-		i{
-			&.pi {
-				padding: 5px;
-				margin: 2px;
+      &.low {
+        background: $blue-300;
+      }
 
-				&.pi-check,
-				&.pi-pencil,
-				&.pi-trash{
-					&:hover {
-						border: 1px solid $cyan;
-						border-radius: 5px;
-						padding: 4px;
-						color: $cyan;
-						cursor: pointer;
-					}
-				}
+      &.free {
+        background: $gray-300;
+      }
+    }
 
-				&.pi-check{
-					&:hover {
-						background: $green-300;
-					}
-				}
+    .todo-title {
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
 
-				&.pi-pencil{
-					&:hover {
-						background: $blue-300;
-					}
-				}
+  .btns-container {
+    justify-self: flex-end;
 
-				&.pi-trash{
-					&:hover {
-						background: $orange-300;
-					}
-				}
-			}
-		}
-	}
+    i {
+      &.pi {
+        padding: 5px;
+        margin: 2px;
+
+        &.pi-check,
+        &.pi-pencil,
+        &.pi-trash {
+          &:hover {
+            border: 1px solid $cyan;
+            border-radius: 5px;
+            padding: 4px;
+            color: $cyan;
+            cursor: pointer;
+          }
+        }
+
+        &.pi-check {
+          &:hover {
+            background: $green-300;
+          }
+        }
+
+        &.pi-pencil {
+          &:hover {
+            background: $blue-300;
+          }
+        }
+
+        &.pi-trash {
+          &:hover {
+            background: $orange-300;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,15 +1,13 @@
 @import "../app.component.scss";
 
 .todos-container {
-	padding: 0 1.5rem;
-
-	.emty-plug {
-		@extend %border-item;
-		margin-bottom: 1rem;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		text-align: center;
-		opacity: .7;
-	}
+  .empty-plug {
+    @extend %border-item;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    opacity: .7;
+  }
 }
