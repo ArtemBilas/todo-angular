@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {getUniqueId} from "../../../shared/lib/id-generator";
-import {ITodos} from "../../todo-list.component";
+import {TodoItem} from "../../models/todo.interface";
 
 @Component({
   selector: 'todo-input',
@@ -9,21 +9,21 @@ import {ITodos} from "../../todo-list.component";
   styleUrls: ['./todo-input.component.scss']
 })
 export class TodoInputComponent implements OnInit {
-  @Output() emitInputValue = new EventEmitter<ITodos>();
+  @Output() emitInputValue = new EventEmitter<TodoItem>();
   form!: FormGroup;
-  todo!: ITodos;
+  todo!: TodoItem;
 
   constructor(private formBuilder: FormBuilder) {
+  }
+
+  get formValue() {
+    return this.form.get('todoInput')?.value;
   }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
       todoInput: ['']
     });
-  }
-
-  get formValue() {
-    return this.form.get('todoInput')?.value;
   }
 
   submitHandler() {

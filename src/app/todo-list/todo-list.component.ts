@@ -1,28 +1,38 @@
-import {Component} from '@angular/core';
-
-export interface ITodos {
-  id: string,
-  title: string,
-  isDone: boolean,
-  priority?: string,
-  category?: string,
-}
+import {Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
+import {select, Store} from "@ngrx/store";
+import {TodoItem, TodoState} from "./models/todo.interface";
+import * as TodoActions from "./store/todo.actions";
+import {selectorTodo} from "./store/todo.selectors";
 
 @Component({
   selector: 'todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss']
 })
-export class TodoListComponent {
 
-  todos: ITodos[] = [
-    {id: '1', title: 'first', isDone: false, priority: 'high'},
-    {id: '2', title: 'second', isDone: false, priority: 'medium'},
-    {id: '3', title: 'third', isDone: false, priority: 'low'},
-    {id: '4', title: 'four', isDone: false, priority: 'free'},
-  ];
+export class TodoListComponent implements OnInit {
+  todoList$!: Observable<TodoItem[]>;
 
-  addTodo(todo: ITodos) {
-    this.todos.push(todo);
+  constructor(
+    private store: Store<{ todos: TodoState }>
+  ) {
+  }
+
+  addTodo(todo: TodoItem) {
+    console.log(todo);
+    this.store.dispatch(TodoActions.addTodo({payload: todo}))
+  }
+
+  removeTodo(id: string) {
+    this.store.dispatch(TodoActions.deleteTodo({payload: id}));
+  }
+
+  isDoneTodo(id: string) {
+    this.store.dispatch(TodoActions.isDoneTodo({payload: id}));
+  }
+
+  ngOnInit() {
+    this.todoList$ = this.store.pipe(select(selectorTodo));
   }
 }

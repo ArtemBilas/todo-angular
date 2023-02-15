@@ -4,8 +4,8 @@
 
 <div class="content">
   <div class="todos-container">
-    <ul *ngIf="todos.length; else empty">
-      <li class="todo-list" *ngFor="let todo of todos">
+    <ul *ngIf="todoList$ && (todoList$ | async)?.length !==0; else empty">
+      <li *ngFor="let todo of todoList$ | async" class="todo-list">
         <todo-item [todo]="todo"></todo-item>
       </li>
     </ul>
